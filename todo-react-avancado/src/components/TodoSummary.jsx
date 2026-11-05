@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { Sparkles, RotateCcw } from "lucide-react";
 import { useTodos } from "../context/TodoContext";
+import React from 'react';
 
 function TodoSummary() {
   const { stats, clearCompleted } = useTodos();

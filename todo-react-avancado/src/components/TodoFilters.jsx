@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { ListTodo, Circle, CheckCircle2 } from "lucide-react";
 import { useTodos } from "../context/TodoContext";
+import React from 'react';
 
 const filters = [
   { id: "all", label: "Todas", icon: ListTodo },

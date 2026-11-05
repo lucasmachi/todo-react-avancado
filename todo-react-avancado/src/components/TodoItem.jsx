@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { Check, Trash2 } from "lucide-react";
+import React from 'react';
 
 function TodoItem({ todo, onToggle, onRemove }) {
   return (

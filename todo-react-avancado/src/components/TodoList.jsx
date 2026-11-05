@@ -2,6 +2,7 @@ import { memo } from "react";
 import { ClipboardList } from "lucide-react";
 import { useTodos } from "../context/TodoContext";
 import TodoItem from "./TodoItem";
+import React from 'react';
 
 function TodoList() {
   const { filteredTodos, toggleTodo, removeTodo, filter } = useTodos();

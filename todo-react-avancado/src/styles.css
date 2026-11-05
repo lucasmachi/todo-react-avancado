@@ -2,15 +2,16 @@
 
 :root {
   font-family: "DM Sans", sans-serif;
-  color: #22243a;
-  background: #f7f8fc;
+  color: #222222;
+  background: #f8f8f8;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  --purple: #7065e8;
-  --purple-dark: #5a4ed0;
-  --muted: #8b8da2;
-  --line: #ececf4;
+
+  --orange: #b94f1b;
+  --orange-dark: #963d13;
+  --muted: #777777;
+  --line: #e8e8e8;
 }
 
 * { box-sizing: border-box; }
@@ -144,4 +145,106 @@ button:disabled { cursor: not-allowed; opacity: .48; }
   .todo-title { font-size: 11px; }
   .remove-button { width: 30px; height: 30px; }
   .workspace-footer { font-size: 9px; }
+}
+
+/* Visual simplificado */
+
+body {
+  background: #f8f8f8;
+}
+
+.page-shell {
+  width: min(100% - 32px, 850px);
+  margin: 0 auto;
+}
+
+.hero {
+  min-height: auto;
+  padding: 55px 5px 35px;
+}
+
+.hero-copy {
+  max-width: 650px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0;
+  color: #555555;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.workspace {
+  padding: 30px;
+  border: 1px solid #eeeeee;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+.workspace-heading {
+  margin-bottom: 22px;
+}
+
+.workspace-heading h2 {
+  color: #222222;
+}
+
+.todo-form input {
+  border-color: #dddddd;
+  color: #222222;
+}
+
+.todo-form input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(185, 79, 27, 0.12);
+}
+
+.add-button {
+  background: var(--orange);
+  box-shadow: none;
+}
+
+.add-button:hover:not(:disabled) {
+  background: var(--orange-dark);
+}
+
+.check-button:hover {
+  border-color: var(--orange);
+}
+
+.is-completed .check-button {
+  border-color: var(--orange);
+  background: var(--orange);
+}
+
+.todo-title {
+  color: #333333;
+}
+
+.remove-button:hover {
+  color: var(--orange);
+  background: #fff1e9;
+}
+
+@media (max-width: 560px) {
+  .hero {
+    min-height: auto;
+    padding: 40px 2px 25px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .workspace {
+    padding: 22px 16px;
+  }
+}
+
+h1 {
+  text-align: center;
+  margin-right: 20px;
+  margin-left: 20px;
 }
